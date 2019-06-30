@@ -1,6 +1,8 @@
 package com.rohindh.smack
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.core.view.GravityCompat
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -30,4 +32,15 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
+    fun onLoginNavHeaderClicked(view: View){
+        val loginIntent = Intent(this,LoginActivity ::class.java)
+        startActivity(loginIntent)
+    }
+    fun onAddChannelClicked(view : View){
+
+    }
+    fun onSendMessageBtnClicked(view : View){
+
+    }
+
 }

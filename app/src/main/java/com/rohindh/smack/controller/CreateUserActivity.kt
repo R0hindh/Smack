@@ -1,10 +1,10 @@
-package com.rohindh.smack
+package com.rohindh.smack.controller
 
-import android.content.Context
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.rohindh.smack.R
 import kotlinx.android.synthetic.main.activity_create_user.*
 import kotlin.random.Random
 
@@ -41,7 +41,11 @@ class CreateUserActivity : AppCompatActivity() {
 
     }
     fun createUserBtnClicked(view: View){
+        AthuServices.registerUser(this,"test@gmail.com","12345678"){complete ->
+            if (complete){
 
+            }
+        }
     }
 
 }

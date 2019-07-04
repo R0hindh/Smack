@@ -1,4 +1,4 @@
-package com.rohindh.smack
+package com.rohindh.smack.controller
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.rohindh.smack.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +19,9 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+            this, drawerLayout, toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -33,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun onLoginNavHeaderClicked(view: View){
-        val loginIntent = Intent(this,LoginActivity ::class.java)
+        val loginIntent = Intent(this, LoginActivity::class.java)
         startActivity(loginIntent)
     }
     fun onAddChannelClicked(view : View){

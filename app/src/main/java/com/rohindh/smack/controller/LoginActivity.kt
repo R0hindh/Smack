@@ -1,9 +1,10 @@
-package com.rohindh.smack
+package com.rohindh.smack.controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.rohindh.smack.R
 
 class LoginActivity : AppCompatActivity() {
 
